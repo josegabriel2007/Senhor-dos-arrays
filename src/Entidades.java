@@ -9,7 +9,7 @@ public abstract class Entidades {
         this.ataque = ataque;
     }
 
-    public abstract void atacar();
+    public abstract void atacar(Entidades alvo);
 
 //Getters
     public String getNome() {
@@ -22,7 +22,7 @@ public abstract class Entidades {
         return ataque;
     }
 
-    public void receberdano(int dano){
+    public void receberDano(int dano){
         vida -= dano;
         if (vida < 0) {
             vida = 0;

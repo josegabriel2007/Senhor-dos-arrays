@@ -1,4 +1,8 @@
-package PACKAGE_NAME;
+public abstract class Inimigos extends Entidades{
+    public Inimigos(String nome,int vida, int ataque){
+        super(nome, vida, ataque);
+    }
 
-public class Inimigos {
+    public abstract void atacar(Entidades alvo);
+
 }

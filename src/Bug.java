@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+public class Bug extends Inimigos{
+    public Bug(){
+        super("Bug", 50, 7);
+    }
 
-public class Bug {
+    @Override
+    public void atacar(Entidades alvo) {
+        alvo.receberDano(this.ataque);
+    }
 }
