@@ -1,3 +1,4 @@
+package Jogaveis;
 public class Goblin extends Inimigos{
     public Goblin(){
         super("Goblin",60, 10);

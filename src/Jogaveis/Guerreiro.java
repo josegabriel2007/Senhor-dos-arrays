@@ -1,3 +1,4 @@
+package Jogaveis;
 public class Guerreiro extends Personagens{
     //Guerreiro: Balanceado
     public Guerreiro(String nome){

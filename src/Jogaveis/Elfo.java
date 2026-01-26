@@ -1,3 +1,4 @@
+package Jogaveis;
 public class Elfo extends Personagens{
     //Elfo: +vida, -ataque
     public Elfo(String nome){

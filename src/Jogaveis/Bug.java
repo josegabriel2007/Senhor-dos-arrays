@@ -1,3 +1,4 @@
+package Jogaveis;
 public class Bug extends Inimigos{
     public Bug(){
         super("Bug", 50, 7);

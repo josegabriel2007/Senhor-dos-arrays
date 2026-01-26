@@ -1,3 +1,4 @@
+package Jogaveis;
 public abstract class Inimigos extends Entidades{
     public Inimigos(String nome,int vida, int ataque){
         super(nome, vida, ataque);

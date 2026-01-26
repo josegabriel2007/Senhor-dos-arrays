@@ -1,9 +1,10 @@
+package Jogaveis;
 public abstract class Entidades {
     public String nome;
     public int vida;
     public int ataque;
 
-    public Entidades(String nome, int vida, int ataque){
+    public Entidades(String nome, int vida, int ataque) {
         this.nome = nome;
         this.vida = vida;
         this.ataque = ataque;

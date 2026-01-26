@@ -1,3 +1,4 @@
+package Jogaveis;
 public class Barbaro extends Personagens{
     //Barbaro: -vida, +ataque
     public Barbaro(String nome){
