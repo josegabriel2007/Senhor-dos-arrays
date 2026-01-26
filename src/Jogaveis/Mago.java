@@ -1,7 +1,8 @@
 package Jogaveis;
-public class Bug extends Inimigos{
-    public Bug(){
-        super("Bug", 50, 7);
+
+public class Mago extends Inimigos {
+    public Mago(){
+        super("Mago",60, 10);
     }
 
     @Override
