@@ -4,9 +4,11 @@ import Principal.Interface;
 import javax.swing.*;
 import java.awt.*;
 
-public class TelaInicial {
+public class TelaInicial extends JPanel {
 
     private JPanel botoesIniciais;
+    public JButton iniciar;
+    public JButton ajuda;
 
     public TelaInicial(Interface tela){
 
@@ -27,8 +29,8 @@ public class TelaInicial {
         botoesIniciais = new JPanel(new GridLayout(2,1,0,5));
         botoesIniciais.setOpaque(false);
         botoesIniciais.setPreferredSize(new Dimension(150,200));
-        JButton iniciar = new JButton("Iniciar");
-        JButton ajuda = new JButton("Ajuda");
+        iniciar = new JButton("Iniciar");
+        ajuda = new JButton("Ajuda");
         iniciar.setBackground(new Color(202, 137, 95));
         iniciar.setFont(new Font("Arial", Font.BOLD, 20));
         iniciar.setForeground(Color.white);
@@ -41,6 +43,6 @@ public class TelaInicial {
         botoesIniciais.add(ajuda);
 
         fundo.add(botoesIniciais);
-        tela.add(fundo);
+        add(fundo, BorderLayout.CENTER);
     }
 }

@@ -4,9 +4,12 @@ import Principal.Interface;
 import javax.swing.*;
 import java.awt.*;
 
-public class Escolha {
+public class Escolha extends JPanel {
 
     private JPanel botoesClasses;
+    public JButton elfo;
+    public JButton guerreiro;
+    public JButton barbaro;
 
     public Escolha(Interface tela, String elfoIMG, String guerreiroIMG, String barbaroIMG){
 
@@ -24,7 +27,7 @@ public class Escolha {
     botoesClasses.setBorder(BorderFactory.createEmptyBorder(50, 200, 130, 200));
 
     //Adicionando os botoes e as imagens
-    JButton elfo = new JButton("ELFO");
+    elfo = new JButton("ELFO");
     elfo.setFont(new Font(Font.SERIF, 1,20));
     elfo.setBackground(new Color(201, 213, 181));
     elfo.setFocusPainted(false);
@@ -35,7 +38,7 @@ public class Escolha {
     Image imagemRedimensionada1 = imagem1.getScaledInstance(120, 180, Image.SCALE_SMOOTH);
     elfo.setIcon(new ImageIcon(imagemRedimensionada1));
 
-    JButton guerreiro = new JButton("GUERREIRO");
+    guerreiro = new JButton("GUERREIRO");
     guerreiro.setFont(new Font(Font.SERIF, 1,20));
     guerreiro.setBackground(new Color(201, 213, 181));
     guerreiro.setFocusPainted(false);
@@ -46,7 +49,7 @@ public class Escolha {
     Image imagemRedimensionada2 = imagem2.getScaledInstance(120, 180, Image.SCALE_SMOOTH);
     guerreiro.setIcon(new ImageIcon(imagemRedimensionada2));
 
-    JButton barbaro = new JButton("BARBARO");
+    barbaro = new JButton("BARBARO");
     barbaro.setFont(new Font(Font.SERIF, 1,20));
     barbaro.setBackground(new Color(201, 213, 181));
     barbaro.setFocusPainted(false);
@@ -62,6 +65,6 @@ public class Escolha {
     botoesClasses.add(barbaro);
 
     fundo.add(botoesClasses, BorderLayout.CENTER);
-    tela.add(fundo);
+    add(fundo, BorderLayout.CENTER);
     }
 }
