@@ -11,6 +11,7 @@ public abstract class Entidades {
     }
 
     public abstract void atacar(Entidades alvo);
+    public abstract String getIcon();
 
 //Getters
     public String getNome() {

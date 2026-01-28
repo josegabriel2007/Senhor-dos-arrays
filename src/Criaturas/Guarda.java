@@ -5,6 +5,9 @@ public class Guarda extends Inimigos {
         super("Guarda",60, 10);
     }
 
+    public String getIcon(){
+        return "src/Cenarios/Imagens/guardian1-sprite.png";
+    };
     @Override
     public void atacar(Entidades alvo) {
         alvo.receberDano(this.ataque);

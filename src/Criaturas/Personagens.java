@@ -5,8 +5,9 @@ public abstract class Personagens extends Entidades{
     }
 
     public abstract void atacar(Entidades alvo);
+    public abstract String getIcon();
 
-    public void pocao(int cura){
-        this.vida += 10;
+    public int pocao(int cura){
+        return cura;
     }
 }

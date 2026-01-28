@@ -5,5 +5,5 @@ public abstract class Inimigos extends Entidades{
     }
 
     public abstract void atacar(Entidades alvo);
-
+    public abstract String getIcon();
 }
