@@ -29,7 +29,7 @@ public class Interface extends JFrame {
         getContentPane().removeAll();
 
         if (valorCenario == 0) {
-            TelaInicial menu = new TelaInicial(this);
+            TelaInicial menu = new TelaInicial();
 
             menu.iniciar.addActionListener(e -> {
                 valorCenario = 1;
@@ -40,12 +40,7 @@ public class Interface extends JFrame {
         }
 
         else if (valorCenario == 1) {
-            Escolha menuEscolha = new Escolha(
-                    this,
-                    "src/Cenarios/elfo.png",
-                    "src/Cenarios/guerreiro.png",
-                    "src/Cenarios/barbaro.png"
-            );
+            Escolha menuEscolha = new Escolha();
 
             menuEscolha.elfo.addActionListener(e -> {
                 você = new Elfo("Elfo");
