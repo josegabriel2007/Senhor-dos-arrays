@@ -5,57 +5,45 @@ import javax.swing.*;
 import java.awt.*;
 
 public class TelaInicial extends JPanel {
-
     public JButton iniciar;
     public JButton ajuda;
 
-    public TelaInicial() {
-
-        // O PRÓPRIO painel é o container principal
+    public TelaInicial(){
         setLayout(new BorderLayout());
         setBackground(new Color(94, 67, 117));
 
-        // =======================
-        // ÁREA NORTE (Título)
-        // =======================
-        JLabel nome = new JLabel("Senhor dos Arrays", SwingConstants.CENTER);
-        nome.setFont(new Font(Font.SERIF, Font.BOLD, 50));
-        nome.setForeground(Color.WHITE);
-
+        //Area norte para o nome do jogo
         JPanel areaNorte = new JPanel(new BorderLayout());
-        areaNorte.setOpaque(false);
+        areaNorte.setBackground(new Color(94, 67, 117));
         areaNorte.setBorder(BorderFactory.createEmptyBorder(100, 0, 0, 0));
-        areaNorte.add(nome, BorderLayout.CENTER);
-
+        JLabel nome = new JLabel("Senhor dos Arrays", SwingConstants.CENTER);
+        nome.setFont(new Font(Font.SERIF, 0,50));
+        nome.setForeground(Color.white);
+        areaNorte.add(nome);
         add(areaNorte, BorderLayout.NORTH);
 
-        // =======================
-        // ÁREA CENTRAL (Botões)
-        // =======================
-        JPanel centro = new JPanel(new GridBagLayout());
-        centro.setOpaque(false);
+        //Botões Iniciais
+        JPanel central = new JPanel(new GridBagLayout());
+        central.setOpaque(false);
 
-        JPanel botoes = new JPanel(new GridLayout(2, 1, 0, 10));
-        botoes.setOpaque(false);
-        botoes.setPreferredSize(new Dimension(200, 120));
-
+        JPanel botoesIniciais = new JPanel(new GridLayout(2,1,0,5));
+        botoesIniciais.setOpaque(false);
+        botoesIniciais.setPreferredSize(new Dimension(150,200));
         iniciar = new JButton("Iniciar");
         ajuda = new JButton("Ajuda");
+        iniciar.setBackground(new Color(202, 137, 95));
+        iniciar.setFont(new Font("Arial", Font.BOLD, 20));
+        iniciar.setForeground(Color.white);
+        iniciar.setFocusPainted(false);
+        ajuda.setBackground(new Color(202, 137, 95));
+        ajuda.setFont(new Font("Arial", Font.BOLD, 20));
+        ajuda.setForeground(Color.white);
+        ajuda.setFocusPainted(false);
 
-        estilizarBotao(iniciar);
-        estilizarBotao(ajuda);
+        botoesIniciais.add(iniciar);
+        botoesIniciais.add(ajuda);
 
-        botoes.add(iniciar);
-        botoes.add(ajuda);
-
-        centro.add(botoes);
-        add(centro, BorderLayout.CENTER);
-    }
-
-    private void estilizarBotao(JButton botao) {
-        botao.setBackground(new Color(202, 137, 95));
-        botao.setFont(new Font("Arial", Font.BOLD, 20));
-        botao.setForeground(Color.WHITE);
-        botao.setFocusPainted(false);
+        central.add(botoesIniciais);
+        add(central, BorderLayout.CENTER);
     }
 }
