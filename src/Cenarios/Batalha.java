@@ -17,6 +17,7 @@ public class Batalha{
 
     private Personagens heroi;
     private Inimigos inimigo;
+    private Cenas cena;
 
     class Painelvida extends JPanel {
 
@@ -46,12 +47,13 @@ public class Batalha{
         }
     }
 
-    public Batalha(Interface tela, Personagens heroiSelecionado, Inimigos inimigoSelecionado){
+    public Batalha(Interface tela, Cenas cenaAtual, Personagens heroiSelecionado){
 
         this.heroi = heroiSelecionado;
-        this.inimigo = inimigoSelecionado;
+        this.cena = cenaAtual;
+        inimigo = cenaAtual.getInimigo();
 
-        ImagemFundo fundo = new ImagemFundo("src/Cenarios/Imagens/floresta.png");
+        ImagemFundo fundo = new ImagemFundo(cenaAtual.getFundo());
         fundo.setLayout(new BorderLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;

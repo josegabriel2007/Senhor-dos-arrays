@@ -1,6 +1,7 @@
 package Principal;
 
 import Cenarios.*;
+import Cenarios.CenaPrisao;
 import Criaturas.*;
 
 import javax.swing.*;
@@ -18,18 +19,26 @@ public class Interface extends JFrame {
         setLayout(new BorderLayout());
         setLocationRelativeTo(null);
 
-        //telaInicial menu = new telaInicial(this);
-        //escolha menuEscolha = new escolha(this, "src/Cenarios/elfo.png","src/Cenarios/guerreiro.png","src/Cenarios/barbaro.png");
-        Personagens você = new Elfo("nome");
-        Inimigos rival = new Dragao();
+        Personagens você = new Barbaro("nome");
+        Cenas floresta = new CenaFloresta();
+        Cenas castelo =  new CenaCastelo();
+        Cenas prisao =  new CenaPrisao();
+        Cenas terraco =  new CenaTerraco();
+
         switch (valorCenario){
             case 1: TelaInicial menu = new TelaInicial(this);
                 break;
             case 2: Escolha menuEscolha = new Escolha(this, "src/Cenarios/elfo.png","src/Cenarios/guerreiro.png","src/Cenarios/barbaro.png");
                 break;
-            case 3: Batalha bat1 = new Batalha(this,você, rival);
-                //Dialogo dig1 =  new Dialogo(this);
+            case 3: Batalha bat1 = new Batalha(this,terraco,você);
                 break;
+            case 4: Dialogo dig1 =  new Dialogo(this, floresta, você);
+                break;
+            case 5: Dialogo dig2 =  new Dialogo(this, castelo, você);
+                break;
+            case 6: Dialogo dig3 =  new Dialogo(this, prisao, você);
+                break;
+            case 7: Dialogo dig4 =  new Dialogo(this, terraco, você);
         }
     }
 }
