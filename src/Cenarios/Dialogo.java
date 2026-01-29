@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Dialogo{
+public class Dialogo {
 
     public JPanel areaNorte;
     public JPanel areaCentro;

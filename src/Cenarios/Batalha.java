@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Batalha{
+public class Batalha {
 
     public int BarraInimigo = 250;
     public int BarraPersonagem = 250;
