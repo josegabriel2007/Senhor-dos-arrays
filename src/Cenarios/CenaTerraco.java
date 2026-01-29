@@ -9,7 +9,7 @@ public class CenaTerraco extends Cenas{
     Inimigos inimigo = new Dragao();
 
     public String getFundo(){
-        return "src/Cenarios/Imagens/terrace-background.png";
+        return "src/Cenarios/Imagens/terraco.png";
     }
     public String getDialogo1(){
         return "Explorando o castelo você foi parar no terraço e achou um dragão, o que deseja fazer?";

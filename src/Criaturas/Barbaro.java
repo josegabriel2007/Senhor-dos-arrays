@@ -2,7 +2,7 @@ package Criaturas;
 public class Barbaro extends Personagens{
     //Barbaro: -vida, +ataque
     public Barbaro(String nome){
-        super(nome, 350, 50);
+        super(nome, 100, 10);
     }
 
     public String getIcon(){

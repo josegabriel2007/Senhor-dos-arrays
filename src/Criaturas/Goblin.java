@@ -1,7 +1,7 @@
 package Criaturas;
 public class Goblin extends Inimigos{
     public Goblin(){
-        super("Goblin",500, 50);
+        super("Goblin",500, 10);
     }
 
     public String getIcon(){

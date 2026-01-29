@@ -2,7 +2,7 @@ package Criaturas;
 
 public class Dragao extends Inimigos {
     public Dragao(){
-        super("Dragao",60, 10);
+        super("Dragao",600, 10);
     }
 
     public String getIcon(){

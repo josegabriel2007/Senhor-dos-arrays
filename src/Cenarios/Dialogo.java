@@ -11,6 +11,9 @@ import java.awt.event.ActionListener;
 
 
 public class Dialogo{
+    //Botoes publicos para conseguir usar fora dessa classe
+    public JButton botaoConversar;
+    public JButton botaoAtacar;
 
     private Personagens heroi;
     private Inimigos inimigo;
@@ -18,10 +21,12 @@ public class Dialogo{
 
     public Dialogo(Interface tela, Cenas cenaAtual, Personagens heroiSelecionado){
 
+        //Iniciando as classes
         this.heroi = heroiSelecionado;
         this.cena = cenaAtual;
         inimigo = cenaAtual.getInimigo();
 
+        //Classe para colocar imagens no fundo
         ImagemFundo fundo = new ImagemFundo(cenaAtual.getFundo());
         fundo.setLayout(new BorderLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -37,6 +42,7 @@ public class Dialogo{
         //AREA CENTRAL
         JPanel areaCentro = new JPanel(new BorderLayout());
         areaCentro.setOpaque(false);
+        //Area do Personagem (Dentro da area central)
         JPanel areaPersonagem = new JPanel(new GridBagLayout());
         areaPersonagem.setPreferredSize(new Dimension(500,400));
         areaPersonagem.setOpaque(false);
@@ -47,7 +53,7 @@ public class Dialogo{
         Personagem.setBorder(BorderFactory.createEmptyBorder(180, 50, 100, 50));
         areaPersonagem.add(Personagem);
         areaCentro.add(areaPersonagem, BorderLayout.WEST);
-
+        //Area do Inimigo (Dentro da area central)
         JPanel areaInimigo = new JPanel(new GridBagLayout());
         areaInimigo.setPreferredSize(new Dimension(500,400));
         areaInimigo.setOpaque(false);
@@ -63,6 +69,7 @@ public class Dialogo{
         JPanel areaSul = new JPanel(new BorderLayout());
         areaSul.setOpaque(false);
         areaSul.setPreferredSize(new Dimension(1000,150));
+        //Zona da conversa (dentro da area sul)
         JTextArea zonaTexto = new JTextArea(cenaAtual.getDialogo1());
         zonaTexto.setEditable(false);
         zonaTexto.setLineWrap(true);
@@ -70,24 +77,26 @@ public class Dialogo{
         zonaTexto.setFont(new Font(Font.SERIF, 0,25));
         zonaTexto.setForeground(Color.white);
         zonaTexto.setBackground(new Color(41, 47, 54));
+        //Botoes da direita (dentro da area sul)
         JPanel botoes = new JPanel(new GridLayout(2,1));
         botoes.setPreferredSize(new Dimension(200,0));
-        JButton botao1 = new JButton("CONVERSAR");
-        JButton botao2 = new JButton("ATACAR");
-        botao1.setFont(new Font("SERIF",Font.BOLD,20));
-        botao1.setBackground(new Color(201, 193, 159));
-        botao1.setForeground(Color.black);
-        botao1.setFocusPainted(false);
-        botao2.setFont(new Font("SERIF",Font.BOLD,20));
-        botao2.setBackground(new Color(201, 193, 159));
-        botao2.setForeground(Color.black);
-        botao2.setFocusPainted(false);
-        botoes.add(botao1);
-        botoes.add(botao2);
+        botaoConversar = new JButton("CONVERSAR");
+        botaoAtacar = new JButton("ATACAR");
+        botaoConversar.setFont(new Font("SERIF",Font.BOLD,20));
+        botaoConversar.setBackground(new Color(201, 193, 159));
+        botaoConversar.setForeground(Color.black);
+        botaoConversar.setFocusPainted(false);
+        botaoAtacar.setFont(new Font("SERIF",Font.BOLD,20));
+        botaoAtacar.setBackground(new Color(201, 193, 159));
+        botaoAtacar.setForeground(Color.black);
+        botaoAtacar.setFocusPainted(false);
+        botoes.add(botaoConversar);
+        botoes.add(botaoAtacar);
         areaSul.add(zonaTexto, BorderLayout.CENTER);
         areaSul.add(botoes, BorderLayout.EAST);
 
-        botao1.addActionListener(new ActionListener() {
+        //Ação para trocar a mensagem quando clicar em "Conversar"
+        botaoConversar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 zonaTexto.setText(cenaAtual.getDialogo2());
             }
