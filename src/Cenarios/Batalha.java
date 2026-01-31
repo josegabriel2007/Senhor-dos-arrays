@@ -12,18 +12,17 @@ import java.awt.event.ActionListener;
 
 public class Batalha{
     //Valores da "vida", "static" pois nosso personagem não recupera vida nas mudanças de cenário
-    public int BarraInimigo = 100;
-    public static int BarraPersonagem = 100;
+    public double BarraInimigo = 100;
+    public static double BarraPersonagem = 100;
 
     public JButton botaoAtacar;
     public JButton botaoCurar;
-    private Personagens heroi;
+    public Personagens heroi;
     private Inimigos inimigo;
     private Cenas cena;
 
     //Classe criada para desenhar as barras de vida
     class Painelvida extends JPanel {
-
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
@@ -34,19 +33,27 @@ public class Batalha{
             int larguraPainel = getWidth();
             int alturaPainel = getHeight();
             int yPos = alturaPainel - 30;
-            int xInimigo = larguraPainel - 280;
+            int xInimigo = larguraPainel - 500;
 
-            g2d.setStroke(new BasicStroke(2.0f));
+            g2d.setStroke(new BasicStroke(3.0f));
             //Barra de vida do Personagem
             g2d.setColor(Color.BLACK);
-            g2d.drawRect(30, yPos, 252, 25);
+            g2d.drawRect(100, yPos, 402, 25);
             g2d.setColor(Color.RED);
-            g2d.fillRect(32, yPos + 1, (BarraPersonagem * 25)/10, 23);
+            g2d.fillRect(102, yPos + 1, (int)Math.round(BarraPersonagem * 4), 23);
             //Barra de vida do Inimigo
             g2d.setColor(Color.BLACK);
-            g2d.drawRect(xInimigo, yPos, 252, 25);
+            g2d.drawRect(xInimigo, yPos, 402, 25);
             g2d.setColor(Color.RED);
-            g2d.fillRect(xInimigo + 1, yPos + 1, (BarraInimigo * 25)/10, 23);
+            g2d.fillRect(xInimigo + 1, yPos + 1, (int)Math.round(BarraInimigo * 4), 23);
+
+            g.setFont(new Font("SansSerif", Font.BOLD, 20));
+            String textoHeroi = (int)Math.round((BarraPersonagem * heroi.getVida())/100) + " / " + heroi.getVidaMaxima();
+            g.setColor(Color.WHITE);
+            g.drawString(textoHeroi, 250, yPos + 20);
+            String textoInimigo = (int)Math.round((BarraInimigo * inimigo.getVida())/100) + " / " + inimigo.getVidaMaxima();
+            g.setColor(Color.WHITE);
+            g.drawString(textoInimigo, larguraPainel - 350, yPos + 20);
         }
     }
 
@@ -66,7 +73,7 @@ public class Batalha{
 
         //AREA NORTE
         JPanel areaNorte = new JPanel(new BorderLayout());
-        areaNorte.setPreferredSize(new Dimension(1000,50));
+        areaNorte.setPreferredSize(new Dimension(1500,75));
         areaNorte.setOpaque(false);
         Painelvida painel = new Painelvida();
         painel.setOpaque(false);
@@ -77,42 +84,42 @@ public class Batalha{
         areaCentro.setOpaque(false);
         //Area do Personagem (dentro da area central)
         JPanel areaPersonagem = new JPanel(new GridBagLayout());
-        areaPersonagem.setPreferredSize(new Dimension(500,400));
+        areaPersonagem.setPreferredSize(new Dimension(750,600));
         areaPersonagem.setOpaque(false);
         ImageIcon PersonagemIcon = new ImageIcon(heroi.getIcon());
         Image ImagemPersonagem = PersonagemIcon.getImage();
-        Image PersonagemRedimensionado = ImagemPersonagem.getScaledInstance(175, 263, Image.SCALE_SMOOTH);
+        Image PersonagemRedimensionado = ImagemPersonagem.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Personagem = new JLabel(new ImageIcon(PersonagemRedimensionado));
-        Personagem.setBorder(BorderFactory.createEmptyBorder(180, 50, 100, 50));
+        Personagem.setBorder(BorderFactory.createEmptyBorder(250,0,0,0));
         areaPersonagem.add(Personagem);
         areaCentro.add(areaPersonagem, BorderLayout.WEST);
         //Area do Inimigo (dentro da area central)
         JPanel areaInimigo = new JPanel(new GridBagLayout());
-        areaInimigo.setPreferredSize(new Dimension(500,400));
+        areaInimigo.setPreferredSize(new Dimension(750,600));
         areaInimigo.setOpaque(false);
         ImageIcon InimigoIcon = new ImageIcon(inimigo.getIcon());
         Image ImagemInimigo = InimigoIcon.getImage();
-        Image InimigoRedimensionado = ImagemInimigo.getScaledInstance(175, 263, Image.SCALE_SMOOTH);
+        Image InimigoRedimensionado = ImagemInimigo.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Inimigo = new JLabel(new ImageIcon(InimigoRedimensionado));
-        Inimigo.setBorder(BorderFactory.createEmptyBorder(180, 50, 100, 50));
+        Inimigo.setBorder(BorderFactory.createEmptyBorder(250,0,0,0));
         areaInimigo.add(Inimigo);
         areaCentro.add(areaInimigo, BorderLayout.EAST);
 
         //AREA SUL
         JPanel areaSul = new JPanel(new GridBagLayout());
-        areaSul.setPreferredSize(new Dimension(1000,150));
+        areaSul.setPreferredSize(new Dimension(1500,225));
         areaSul.setBackground(new Color(92, 71, 66));
         //Botoes de atacar e curar (dentro da area sul)
-        JPanel botoes = new JPanel(new GridLayout(1,2,50,0));
-        botoes.setPreferredSize(new Dimension(400,50));
+        JPanel botoes = new JPanel(new GridLayout(1,2,75,0));
+        botoes.setPreferredSize(new Dimension(750,75));
         botoes.setOpaque(false);
-        botaoAtacar = new JButton("ATACAR");
+        botaoAtacar = new JButton("ATACAR:"+ (int)heroi.getAtaque()+"pts");
         botaoCurar = new JButton("CURAR");
-        botaoAtacar.setFont(new Font("SERIF",Font.BOLD,20));
+        botaoAtacar.setFont(new Font("SERIF",Font.BOLD,30));
         botaoAtacar.setBackground(new Color(201, 193, 159));
         botaoAtacar.setForeground(Color.black);
         botaoAtacar.setFocusPainted(false);
-        botaoCurar.setFont(new Font("SERIF",Font.BOLD,20));
+        botaoCurar.setFont(new Font("SERIF",Font.BOLD,30));
         botaoCurar.setBackground(new Color(201, 193, 159));
         botaoCurar.setForeground(Color.black);
         botaoCurar.setFocusPainted(false);
@@ -128,11 +135,17 @@ public class Batalha{
                     BarraInimigo = BarraInimigo - (100/(inimigo.getVida()/heroi.getAtaque()));
                     painel.repaint();
                 }
+                if (BarraInimigo < 0) {
+                    BarraInimigo = 0;
+                }
                 // Temporizador com o delay de tomar dano
                 Timer temporizador = new Timer(500, e1 -> {
                     if (BarraPersonagem > 0) {
                         BarraPersonagem = BarraPersonagem - (100/(heroi.getVida()/inimigo.getAtaque()));
                         painel.repaint();
+                    }
+                    if (BarraPersonagem < 0) {
+                        BarraPersonagem = 0;
                     }
                     ((Timer)e1.getSource()).stop();
                 });
@@ -151,7 +164,7 @@ public class Batalha{
                 desabilitar.start();
             }
         });
-
+        //Ação do botão de curar que
         botaoCurar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (BarraPersonagem > 0 && BarraPersonagem < 100) {
@@ -161,9 +174,12 @@ public class Batalha{
                         BarraPersonagem = BarraPersonagem - (BarraPersonagem - 100);
                     }
                 }
+                if (BarraPersonagem < 0) {
+                    BarraPersonagem = 0;
+                }
                 Timer timer = new Timer(1000, e1 -> {
                     if (BarraPersonagem > 0) {
-                        BarraPersonagem = BarraPersonagem - ((heroi.getVida() * inimigo.getAtaque()) / 1000);
+                        BarraPersonagem = BarraPersonagem - (100/(heroi.getVida()/inimigo.getAtaque()));
                         painel.repaint();
                     }
                     ((Timer)e1.getSource()).stop();

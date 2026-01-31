@@ -7,6 +7,12 @@ public class CenaPrisao extends Cenas{
 
     Inimigos inimigo = new Mago();
 
+    public String getTitulo(){
+        return "PRISÃO";
+    }
+    public String getTransicao(){
+        return "Como você não foi convidade, você teve que andar furtivamente pelo castelo, e olha onde veio parar";
+    }
     public String getFundo(){
         return "src/Cenarios/Imagens/prison-background.png";
     }

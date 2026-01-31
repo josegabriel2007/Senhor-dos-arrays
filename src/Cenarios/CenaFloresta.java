@@ -7,6 +7,12 @@ public class CenaFloresta extends Cenas{
 
     Inimigos inimigo = new Goblin();
 
+    public String getTitulo(){
+        return "FLORESTA";
+    }
+    public String getTransicao(){
+        return "Andando mais um pouco pela floresta, você sente a presença de algo, mas não sabe o que é";
+    }
     public String getFundo(){
         return "src/Cenarios/Imagens/floresta.png";
     }

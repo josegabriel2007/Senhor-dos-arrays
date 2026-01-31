@@ -8,6 +8,12 @@ public class CenaTerraco extends Cenas{
 
     Inimigos inimigo = new Dragao();
 
+    public String getTitulo(){
+        return "TERRAÇO";
+    }
+    public String getTransicao(){
+        return "Depois de explorar bastante o castelo, parece que você achou uma 'saida' ";
+    }
     public String getFundo(){
         return "src/Cenarios/Imagens/terraco.png";
     }

@@ -1,30 +1,33 @@
 package Criaturas;
 public abstract class Entidades {
     public String nome;
-    public int vida;
-    public int ataque;
+    public double vida;
+    public double ataque;
+    public String vidaMaxima;
 
-    public Entidades(String nome, int vida, int ataque) {
+    public Entidades(String nome, double vida, double ataque, String vidaMaxima) {
         this.nome = nome;
         this.vida = vida;
         this.ataque = ataque;
+        this.vidaMaxima = vidaMaxima;
     }
 
     public abstract void atacar(Entidades alvo);
-    public abstract String getIcon();
 
 //Getters
     public String getNome() {
         return nome;
     }
-    public int getVida() {
+    public double getVida() {
         return vida;
     }
-    public int getAtaque() {
+    public double getAtaque() {
         return ataque;
     }
+    public abstract String getVidaMaxima();
+    public abstract String getIcon();
 
-    public void receberDano(int dano){
+    public void receberDano(double dano){
         vida -= dano;
         if (vida < 0) {
             vida = 0;

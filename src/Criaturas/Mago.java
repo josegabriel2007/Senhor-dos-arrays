@@ -2,11 +2,14 @@ package Criaturas;
 
 public class Mago extends Inimigos {
     public Mago(){
-        super("Mago",600, 100);
+        super("Mago",400, 50,"400");
     }
 
     public String getIcon(){
-        return "src/Cenarios/Imagens/darkmage-sprite.png";
+        return "src/Criaturas/Icons/darkmage-sprite.png";
+    };
+    public String getVidaMaxima(){
+        return vidaMaxima;
     };
     @Override
     public void atacar(Entidades alvo) {

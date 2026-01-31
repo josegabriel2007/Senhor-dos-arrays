@@ -2,11 +2,14 @@ package Criaturas;
 public class Barbaro extends Personagens{
     //Barbaro: -vida, +ataque
     public Barbaro(String nome){
-        super(nome, 100, 10);
+        super(nome, 300, 100,"300");
     }
 
     public String getIcon(){
-        return "src/Cenarios/Imagens/barbaro.png";
+        return "src/Criaturas/Icons/barbaro.png";
+    };
+    public String getVidaMaxima(){
+        return vidaMaxima;
     };
     public void atacar(Entidades alvo){
         alvo.receberDano(this.ataque);

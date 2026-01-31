@@ -18,46 +18,46 @@ public class Escolha extends JPanel {
         JLabel textoEscolha = new JLabel("ESCOLHA SUA CLASSE:", SwingConstants.CENTER);
         textoEscolha.setFont(new Font(Font.SERIF, 0,50));
         textoEscolha.setForeground(Color.white);
-        textoEscolha.setBorder(BorderFactory.createEmptyBorder(50, 0, 0, 0));
+        textoEscolha.setBorder(BorderFactory.createEmptyBorder(70, 0, 0, 0));
         add(textoEscolha, BorderLayout.NORTH);
 
-        botoesClasses = new JPanel(new GridLayout(1,3,20,0));
+        botoesClasses = new JPanel(new GridLayout(1,3,30,0));
         botoesClasses.setOpaque(false);
         botoesClasses.setPreferredSize(new Dimension(550,220));
-        botoesClasses.setBorder(BorderFactory.createEmptyBorder(50, 200, 130, 200));
+        botoesClasses.setBorder(BorderFactory.createEmptyBorder(120, 350, 220, 350));
 
         //Adicionando os botoes e as imagens
         elfo = new JButton("ELFO");
-        elfo.setFont(new Font(Font.SERIF, 1,20));
+        elfo.setFont(new Font(Font.SERIF, 1,30));
         elfo.setBackground(new Color(201, 213, 181));
         elfo.setFocusPainted(false);
         elfo.setVerticalTextPosition(SwingConstants.BOTTOM);
         elfo.setHorizontalTextPosition(SwingConstants.CENTER);
-        ImageIcon elfoIcon = new ImageIcon("src/Cenarios/Imagens/elfo.png");
+        ImageIcon elfoIcon = new ImageIcon("src/Criaturas/Icons/elfo.png");
         Image imagem1 = elfoIcon.getImage();
-        Image imagemRedimensionada1 = imagem1.getScaledInstance(120, 180, Image.SCALE_SMOOTH);
+        Image imagemRedimensionada1 = imagem1.getScaledInstance(150, 225, Image.SCALE_SMOOTH);
         elfo.setIcon(new ImageIcon(imagemRedimensionada1));
 
         guerreiro = new JButton("GUERREIRO");
-        guerreiro.setFont(new Font(Font.SERIF, 1,20));
+        guerreiro.setFont(new Font(Font.SERIF, 1,30));
         guerreiro.setBackground(new Color(201, 213, 181));
         guerreiro.setFocusPainted(false);
         guerreiro.setVerticalTextPosition(SwingConstants.BOTTOM);
         guerreiro.setHorizontalTextPosition(SwingConstants.CENTER);
-        ImageIcon guerreiroIcon = new ImageIcon("src/Cenarios/Imagens/guerreiro.png");
+        ImageIcon guerreiroIcon = new ImageIcon("src/Criaturas/Icons/guerreiro.png");
         Image imagem2 = guerreiroIcon.getImage();
-        Image imagemRedimensionada2 = imagem2.getScaledInstance(120, 180, Image.SCALE_SMOOTH);
+        Image imagemRedimensionada2 = imagem2.getScaledInstance(150, 225, Image.SCALE_SMOOTH);
         guerreiro.setIcon(new ImageIcon(imagemRedimensionada2));
 
         barbaro = new JButton("BARBARO");
-        barbaro.setFont(new Font(Font.SERIF, 1,20));
+        barbaro.setFont(new Font(Font.SERIF, 1,30));
         barbaro.setBackground(new Color(201, 213, 181));
         barbaro.setFocusPainted(false);
         barbaro.setVerticalTextPosition(SwingConstants.BOTTOM);
         barbaro.setHorizontalTextPosition(SwingConstants.CENTER);
-        ImageIcon barbaroIcon = new ImageIcon("src/Cenarios/Imagens/barbaro.png");
+        ImageIcon barbaroIcon = new ImageIcon("src/Criaturas/Icons/barbaro.png");
         Image imagem3 = barbaroIcon.getImage();
-        Image imagemRedimensionada3 = imagem3.getScaledInstance(120, 180, Image.SCALE_SMOOTH);
+        Image imagemRedimensionada3 = imagem3.getScaledInstance(150, 225, Image.SCALE_SMOOTH);
         barbaro.setIcon(new ImageIcon(imagemRedimensionada3));
 
         botoesClasses.add(elfo);

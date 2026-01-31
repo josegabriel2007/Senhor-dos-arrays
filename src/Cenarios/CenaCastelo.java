@@ -6,6 +6,12 @@ import Criaturas.Inimigos;
 public class CenaCastelo extends Cenas{
     Inimigos inimigo = new Guarda();
 
+    public String getTitulo(){
+        return "ENTRADA DO CASTELO";
+    }
+    public String getTransicao(){
+        return "Depois de algum tempo na floresta você avistou algo no horizonte e foi em direção";
+    }
     public String getFundo(){
         return "src/Cenarios/Imagens/castelo.png";
     }

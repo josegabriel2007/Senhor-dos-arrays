@@ -14,6 +14,7 @@ public class Dialogo{
     //Botoes publicos para conseguir usar fora dessa classe
     public JButton botaoConversar;
     public JButton botaoAtacar;
+    public JTextArea zonaTexto;
 
     private Personagens heroi;
     private Inimigos inimigo;
@@ -37,56 +38,56 @@ public class Dialogo{
         //AREA NORTE
         JPanel areaNorte = new JPanel(new BorderLayout());
         areaNorte.setOpaque(false);
-        areaNorte.setPreferredSize(new Dimension(1000,50));
+        areaNorte.setPreferredSize(new Dimension(1500,75));
 
         //AREA CENTRAL
         JPanel areaCentro = new JPanel(new BorderLayout());
         areaCentro.setOpaque(false);
         //Area do Personagem (Dentro da area central)
         JPanel areaPersonagem = new JPanel(new GridBagLayout());
-        areaPersonagem.setPreferredSize(new Dimension(500,400));
+        areaPersonagem.setPreferredSize(new Dimension(750,600));
         areaPersonagem.setOpaque(false);
         ImageIcon PersonagemIcon = new ImageIcon(heroi.getIcon());
         Image ImagemPersonagem = PersonagemIcon.getImage();
-        Image PersonagemRedimensionado = ImagemPersonagem.getScaledInstance(175, 263, Image.SCALE_SMOOTH);
+        Image PersonagemRedimensionado = ImagemPersonagem.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Personagem = new JLabel(new ImageIcon(PersonagemRedimensionado));
-        Personagem.setBorder(BorderFactory.createEmptyBorder(180, 50, 100, 50));
+        Personagem.setBorder(BorderFactory.createEmptyBorder(250, 0, 0, 0));
         areaPersonagem.add(Personagem);
         areaCentro.add(areaPersonagem, BorderLayout.WEST);
         //Area do Inimigo (Dentro da area central)
         JPanel areaInimigo = new JPanel(new GridBagLayout());
-        areaInimigo.setPreferredSize(new Dimension(500,400));
+        areaInimigo.setPreferredSize(new Dimension(750,600));
         areaInimigo.setOpaque(false);
         ImageIcon InimigoIcon = new ImageIcon(inimigo.getIcon());
         Image ImagemInimigo = InimigoIcon.getImage();
-        Image InimigoRedimensionado = ImagemInimigo.getScaledInstance(175, 263, Image.SCALE_SMOOTH);
+        Image InimigoRedimensionado = ImagemInimigo.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Inimigo = new JLabel(new ImageIcon(InimigoRedimensionado));
-        Inimigo.setBorder(BorderFactory.createEmptyBorder(180, 50, 100, 50));
+        Inimigo.setBorder(BorderFactory.createEmptyBorder(250,0,0,0));
         areaInimigo.add(Inimigo);
         areaCentro.add(areaInimigo, BorderLayout.EAST);
 
         //AREA SUL
         JPanel areaSul = new JPanel(new BorderLayout());
         areaSul.setOpaque(false);
-        areaSul.setPreferredSize(new Dimension(1000,150));
+        areaSul.setPreferredSize(new Dimension(1500,225));
         //Zona da conversa (dentro da area sul)
-        JTextArea zonaTexto = new JTextArea(cenaAtual.getDialogo1());
+        zonaTexto = new JTextArea(cenaAtual.getDialogo1());
         zonaTexto.setEditable(false);
         zonaTexto.setLineWrap(true);
         zonaTexto.setWrapStyleWord(true);
-        zonaTexto.setFont(new Font(Font.SERIF, 0,25));
+        zonaTexto.setFont(new Font(Font.SERIF, 0,35));
         zonaTexto.setForeground(Color.white);
         zonaTexto.setBackground(new Color(41, 47, 54));
         //Botoes da direita (dentro da area sul)
         JPanel botoes = new JPanel(new GridLayout(2,1));
-        botoes.setPreferredSize(new Dimension(200,0));
+        botoes.setPreferredSize(new Dimension(300,0));
         botaoConversar = new JButton("CONVERSAR");
         botaoAtacar = new JButton("ATACAR");
-        botaoConversar.setFont(new Font("SERIF",Font.BOLD,20));
+        botaoConversar.setFont(new Font("SERIF",Font.BOLD,30));
         botaoConversar.setBackground(new Color(201, 193, 159));
         botaoConversar.setForeground(Color.black);
         botaoConversar.setFocusPainted(false);
-        botaoAtacar.setFont(new Font("SERIF",Font.BOLD,20));
+        botaoAtacar.setFont(new Font("SERIF",Font.BOLD,30));
         botaoAtacar.setBackground(new Color(201, 193, 159));
         botaoAtacar.setForeground(Color.black);
         botaoAtacar.setFocusPainted(false);
