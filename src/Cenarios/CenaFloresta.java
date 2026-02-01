@@ -11,16 +11,16 @@ public class CenaFloresta extends Cenas{
         return "FLORESTA";
     }
     public String getTransicao(){
-        return "Andando mais um pouco pela floresta, você sente a presença de algo, mas não sabe o que é";
+        return "Andando mais um pouco pela floresta, você sente a presença de algo, mas não sabe o que é.";
     }
     public String getFundo(){
         return "src/Cenarios/Imagens/floresta.png";
     }
     public String getDialogo1(){
-        return "Você entrou em uma floresta e acabou encontrando um goblin, ele parece impaciente, o que deseja fazer?";
+        return "Você acabou encontrando um goblin, ele faz sons estranhos e parece impaciente, o que deseja fazer?";
     }
     public String getDialogo2(){
-        return "Ele não te entendeu, ficou furioso e acabou te atacando enquanto você estava desprevinido";
+        return "Ele não te entendeu, ficou furioso e acabou te atacando enquanto você estava desprevenido.\n(Você iniciará a batalha com menos vida)";
     }
     public Inimigos getInimigo(){
         return inimigo;

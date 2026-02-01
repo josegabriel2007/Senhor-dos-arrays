@@ -11,7 +11,4 @@ public class Barbaro extends Personagens{
     public String getVidaMaxima(){
         return vidaMaxima;
     };
-    public void atacar(Entidades alvo){
-        alvo.receberDano(this.ataque);
-    }
 }

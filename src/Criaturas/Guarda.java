@@ -2,7 +2,7 @@ package Criaturas;
 
 public class Guarda extends Inimigos {
     public Guarda(){
-        super("Guarda",400, 40,"400");
+        super("Guarda", 400,45,"400");
     }
 
     public String getIcon(){

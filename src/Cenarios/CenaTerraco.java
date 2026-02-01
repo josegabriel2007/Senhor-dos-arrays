@@ -2,7 +2,6 @@ package Cenarios;
 
 import Criaturas.Dragao;
 import Criaturas.Inimigos;
-import Criaturas.Mago;
 
 public class CenaTerraco extends Cenas{
 
@@ -12,16 +11,16 @@ public class CenaTerraco extends Cenas{
         return "TERRAÇO";
     }
     public String getTransicao(){
-        return "Depois de explorar bastante o castelo, parece que você achou uma 'saida' ";
+        return "Depois de derrotar o mago, você escuta um estrondoso rugido, talvez uma ultima ameaça, aparentemente o mago não estava sozinho";
     }
     public String getFundo(){
         return "src/Cenarios/Imagens/terraco.png";
     }
     public String getDialogo1(){
-        return "Explorando o castelo você foi parar no terraço e achou um dragão, o que deseja fazer?";
+        return "Chegando no terraço do castelo você achou um dragão, o que deseja fazer?";
     }
     public String getDialogo2(){
-        return "Porque vocẽ tentou conversar com um dragão?";
+        return "Porque vocẽ tentou conversar com um dragão? Vou te dar uma segunda chance, mas a batalha iniciará com menos vida";
     }
     public Inimigos getInimigo(){
         return inimigo;

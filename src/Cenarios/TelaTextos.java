@@ -18,7 +18,7 @@ public class TelaTextos extends JPanel {
 
         JLabel titulo = new JLabel(cena.getTitulo() , SwingConstants.CENTER);
         titulo.setForeground(Color.white);
-        titulo.setFont(new Font(Font.SERIF, 0,65));
+        titulo.setFont(new Font(Font.SERIF, 0,60));
         titulo.setBorder(BorderFactory.createEmptyBorder(60,0,0,0));
         add(titulo, BorderLayout.NORTH);
 
@@ -29,7 +29,7 @@ public class TelaTextos extends JPanel {
         transicao.setLineWrap(true);
         transicao.setEditable(false);
         transicao.setWrapStyleWord(true);
-        transicao.setBorder(BorderFactory.createEmptyBorder(150,400,0,400));
+        transicao.setBorder(BorderFactory.createEmptyBorder(100,400,0,400));
         add(transicao, BorderLayout.CENTER);
 
         avancar = new JButton("AVANÇAR");

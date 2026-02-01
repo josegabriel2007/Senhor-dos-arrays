@@ -76,6 +76,7 @@ public class Dialogo{
         zonaTexto.setLineWrap(true);
         zonaTexto.setWrapStyleWord(true);
         zonaTexto.setFont(new Font(Font.SERIF, 0,35));
+        zonaTexto.setMargin(new Insets(2, 15, 0, 10));
         zonaTexto.setForeground(Color.white);
         zonaTexto.setBackground(new Color(41, 47, 54));
         //Botoes da direita (dentro da area sul)

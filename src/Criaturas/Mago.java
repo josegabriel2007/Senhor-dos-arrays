@@ -2,7 +2,7 @@ package Criaturas;
 
 public class Mago extends Inimigos {
     public Mago(){
-        super("Mago",400, 50,"400");
+        super("Mago",480, 53,"480");
     }
 
     public String getIcon(){

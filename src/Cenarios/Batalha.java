@@ -114,7 +114,7 @@ public class Batalha{
         botoes.setPreferredSize(new Dimension(750,75));
         botoes.setOpaque(false);
         botaoAtacar = new JButton("ATACAR:"+ (int)heroi.getAtaque()+"pts");
-        botaoCurar = new JButton("CURAR");
+        botaoCurar = new JButton("CURAR: +30%");
         botaoAtacar.setFont(new Font("SERIF",Font.BOLD,30));
         botaoAtacar.setBackground(new Color(201, 193, 159));
         botaoAtacar.setForeground(Color.black);
@@ -168,7 +168,7 @@ public class Batalha{
         botaoCurar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (BarraPersonagem > 0 && BarraPersonagem < 100) {
-                    BarraPersonagem = BarraPersonagem + heroi.pocao(20);
+                    BarraPersonagem = BarraPersonagem + heroi.pocao(30);
                     painel.repaint();
                     if(BarraPersonagem > 100){
                         BarraPersonagem = BarraPersonagem - (BarraPersonagem - 100);

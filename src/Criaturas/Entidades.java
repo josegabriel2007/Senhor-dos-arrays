@@ -12,8 +12,6 @@ public abstract class Entidades {
         this.vidaMaxima = vidaMaxima;
     }
 
-    public abstract void atacar(Entidades alvo);
-
 //Getters
     public String getNome() {
         return nome;

@@ -2,11 +2,11 @@ package Criaturas;
 
 public class Dragao extends Inimigos {
     public Dragao(){
-        super("Dragao",400, 50,"400");
+        super("Dragao",650, 57,"650");
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/dragon-sprite.png";
+        return "src/Criaturas/Icons/dragao.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;
