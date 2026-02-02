@@ -14,7 +14,7 @@ public class CenaCorredor extends Cenas{
         return "Explorando o castelo em busca do mago, você parece que encontrou alguém.";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/corredor.png";
+        return "src/Cenarios/Imagens/corredor.jpg";
     }
     public String getDialogo1(){
         return "Você achou um soldado que também está a procura do mago, o que desejas fazer?";

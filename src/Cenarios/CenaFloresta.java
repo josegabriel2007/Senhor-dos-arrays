@@ -14,7 +14,7 @@ public class CenaFloresta extends Cenas{
         return "Andando mais um pouco pela floresta, você sente a presença de algo, mas não sabe o que é.";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/floresta.png";
+        return "src/Cenarios/Imagens/floresta.jpg";
     }
     public String getDialogo1(){
         return "Você acabou encontrando um goblin, ele faz sons estranhos e parece impaciente, o que deseja fazer?";

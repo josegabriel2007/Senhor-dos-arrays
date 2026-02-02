@@ -13,7 +13,7 @@ public class CenaCastelo extends Cenas{
         return "Depois de algum tempo na floresta você avistou algo no horizonte e foi em direção";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/castelo.png";
+        return "src/Cenarios/Imagens/castelo.jpg";
     }
     public String getDialogo1(){
         return "Você conseguiu sair da floresta e avistou um castelo, se aproximando dele um guarda veio falar com você, o que deseja fazer?";

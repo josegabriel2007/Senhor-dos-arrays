@@ -13,7 +13,7 @@ public class CenaSalao extends Cenas{
         return "Explorando o castelo, você achou o salão do rei, mas parece que o rei não está...";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/salao.png";
+        return "src/Cenarios/Imagens/salao.jpg";
     }
     public String getDialogo1(){
         return "Aparentemente você achou a mente por trás desse ataque, um mago com o rei de refém, ele parece ter algo a te contar, o que deseja fazer?";
