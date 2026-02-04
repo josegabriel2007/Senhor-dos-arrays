@@ -10,4 +10,10 @@ public abstract class Personagens extends Entidades{
     public int pocao(int cura){
         return cura;
     }
+    public double bonus(boolean bonus){
+        return ataque += 5;
+    }
+    public double maldicao(boolean maldicao){
+        return ataque -= 5;
+    }
 }

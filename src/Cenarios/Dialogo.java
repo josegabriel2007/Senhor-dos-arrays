@@ -16,7 +16,7 @@ public class Dialogo{
     public JButton botaoAtacar;
     public JTextArea zonaTexto;
 
-    private Personagens heroi;
+    public Personagens heroi;
     private Inimigos inimigo;
     private Cenas cena;
 
@@ -51,7 +51,7 @@ public class Dialogo{
         Image ImagemPersonagem = PersonagemIcon.getImage();
         Image PersonagemRedimensionado = ImagemPersonagem.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Personagem = new JLabel(new ImageIcon(PersonagemRedimensionado));
-        Personagem.setBorder(BorderFactory.createEmptyBorder(250, 0, 0, 0));
+        Personagem.setBorder(BorderFactory.createEmptyBorder(280, 0, 0, 0));
         areaPersonagem.add(Personagem);
         areaCentro.add(areaPersonagem, BorderLayout.WEST);
         //Area do Inimigo (Dentro da area central)
@@ -62,7 +62,7 @@ public class Dialogo{
         Image ImagemInimigo = InimigoIcon.getImage();
         Image InimigoRedimensionado = ImagemInimigo.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Inimigo = new JLabel(new ImageIcon(InimigoRedimensionado));
-        Inimigo.setBorder(BorderFactory.createEmptyBorder(250,0,0,0));
+        Inimigo.setBorder(BorderFactory.createEmptyBorder(280,0,0,0));
         areaInimigo.add(Inimigo);
         areaCentro.add(areaInimigo, BorderLayout.EAST);
 

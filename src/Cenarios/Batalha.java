@@ -90,7 +90,7 @@ public class Batalha{
         Image ImagemPersonagem = PersonagemIcon.getImage();
         Image PersonagemRedimensionado = ImagemPersonagem.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Personagem = new JLabel(new ImageIcon(PersonagemRedimensionado));
-        Personagem.setBorder(BorderFactory.createEmptyBorder(250,0,0,0));
+        Personagem.setBorder(BorderFactory.createEmptyBorder(280,0,0,0));
         areaPersonagem.add(Personagem);
         areaCentro.add(areaPersonagem, BorderLayout.WEST);
         //Area do Inimigo (dentro da area central)
@@ -101,7 +101,7 @@ public class Batalha{
         Image ImagemInimigo = InimigoIcon.getImage();
         Image InimigoRedimensionado = ImagemInimigo.getScaledInstance(220, 330, Image.SCALE_SMOOTH);
         JLabel Inimigo = new JLabel(new ImageIcon(InimigoRedimensionado));
-        Inimigo.setBorder(BorderFactory.createEmptyBorder(250,0,0,0));
+        Inimigo.setBorder(BorderFactory.createEmptyBorder(280,0,0,0));
         areaInimigo.add(Inimigo);
         areaCentro.add(areaInimigo, BorderLayout.EAST);
 
@@ -147,6 +147,8 @@ public class Batalha{
                     if (BarraPersonagem < 0) {
                         BarraPersonagem = 0;
                     }
+
+                    Inimigo.setBorder(BorderFactory.createEmptyBorder(280,0,0,0));
                     ((Timer)e1.getSource()).stop();
                 });
                 temporizador.setRepeats(false);
@@ -162,6 +164,22 @@ public class Batalha{
                 });
                 desabilitar.setRepeats(false);
                 desabilitar.start();
+
+                //animação simples
+                Personagem.setBorder(BorderFactory.createEmptyBorder(280,200,0,0));
+                Timer temporizador1 = new Timer(150, e1 -> {
+                    Personagem.setBorder(BorderFactory.createEmptyBorder(280,0,0,0));
+                    ((Timer)e1.getSource()).stop();
+                });
+                temporizador1.setRepeats(false);
+                temporizador1.start();
+
+                Timer temporizador2 = new Timer(350, e1 -> {
+                    Inimigo.setBorder(BorderFactory.createEmptyBorder(280,0,0,200));
+                    ((Timer)e1.getSource()).stop();
+                });
+                temporizador2.setRepeats(false);
+                temporizador2.start();
             }
         });
         //Ação do botão de curar que
@@ -177,11 +195,12 @@ public class Batalha{
                 if (BarraPersonagem < 0) {
                     BarraPersonagem = 0;
                 }
-                Timer timer = new Timer(1000, e1 -> {
+                Timer timer = new Timer(500, e1 -> {
                     if (BarraPersonagem > 0) {
                         BarraPersonagem = BarraPersonagem - (100/(heroi.getVida()/inimigo.getAtaque()));
                         painel.repaint();
                     }
+                    Inimigo.setBorder(BorderFactory.createEmptyBorder(280,0,0,0));
                     ((Timer)e1.getSource()).stop();
                 });
                 timer.setRepeats(false);
@@ -197,6 +216,22 @@ public class Batalha{
                 });
                 desabilitar.setRepeats(false);
                 desabilitar.start();
+
+
+                Personagem.setBorder(BorderFactory.createEmptyBorder(250,0,0,0));
+                Timer temporizador1 = new Timer(100, e1 -> {
+                    Personagem.setBorder(BorderFactory.createEmptyBorder(280,0,0,0));
+                    ((Timer)e1.getSource()).stop();
+                });
+                temporizador1.setRepeats(false);
+                temporizador1.start();
+
+                Timer temporizador2 = new Timer(350, e1 -> {
+                    Inimigo.setBorder(BorderFactory.createEmptyBorder(280,0,0,200));
+                    ((Timer)e1.getSource()).stop();
+                });
+                temporizador2.setRepeats(false);
+                temporizador2.start();
             }
         });
 

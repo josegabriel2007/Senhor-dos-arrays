@@ -97,6 +97,7 @@ public class Interface extends JFrame {
             dialogo.botaoAtacar.addActionListener(e -> {
                 dialogo.botaoConversar.setText("REINICIAR");
                 dialogo.botaoAtacar.setEnabled(false);
+                dialogo.zonaTexto.setText("Atacar uma criança, que tipo de herói é você? Enquanto você se prepara para atacá-la, uma guarda que procurava o príncipe na floresta estava à espreita. Ela te ataca pelas costas com um golpe fatal, e você morre.");
                 dialogo.botaoConversar.addActionListener(e1 -> {
                     valorCenario = 30;
                     trocarTela();
@@ -167,8 +168,8 @@ public class Interface extends JFrame {
             Cenas castelo = new CenaCastelo();
             Dialogo dialogo = new Dialogo(this,castelo,você);
 
-            //Ação do botão conversar que você tenta persuadir o guarda
-            dialogo.botaoConversar.setText("PERSUADIR");
+            //Ação do botão conversar que você tenta subornar o guarda
+            dialogo.botaoConversar.setText("SUBORNAR");
             dialogo.botaoConversar.addActionListener(e -> {
                 dialogo.botaoConversar.setText("ENTRAR");
                 dialogo.botaoAtacar.setEnabled(false);
@@ -217,6 +218,7 @@ public class Interface extends JFrame {
 
             //Ação do botão conversar que você tenta conversar com o soldado
             dialogo.botaoConversar.addActionListener(e -> {
+                dialogo.heroi.bonus(true);
                 dialogo.botaoConversar.setText("AVANÇAR");
                 dialogo.botaoAtacar.setEnabled(false);
                 dialogo.botaoConversar.addActionListener(e1 -> {
@@ -411,8 +413,8 @@ public class Interface extends JFrame {
             Cenas castelo = new CenaCastelo();
             Dialogo dialogo = new Dialogo(this,castelo,você);
 
-            //Ação do botão conversar que você tenta persuadir o guarda
-            dialogo.botaoConversar.setText("PERSUADIR");
+            //Ação do botão conversar que você tenta subornar o guarda
+            dialogo.botaoConversar.setText("SUBORNAR");
             dialogo.botaoConversar.addActionListener(e -> {
                 dialogo.botaoConversar.setText("ENTRAR");
                 dialogo.botaoAtacar.setEnabled(false);
@@ -461,6 +463,7 @@ public class Interface extends JFrame {
 
             dialogo.botaoConversar.setText("IGNORAR");
             dialogo.botaoConversar.addActionListener(e -> {
+                dialogo.heroi.maldicao(true);
                 dialogo.botaoConversar.setText("AVANÇAR");
                 dialogo.botaoAtacar.setEnabled(false);
                 dialogo.botaoConversar.addActionListener(e1 -> {
@@ -507,7 +510,10 @@ public class Interface extends JFrame {
             dialogo.zonaTexto.setText("Aparentemente você achou a mente por trás desse ataque, um mago com o rei de refém, ele parece furioso e não está disposto a conversar, o que deseja fazer?");
             //Ação do botão conversar que ele te conta a historia
             dialogo.botaoConversar.addActionListener(e -> {
-                dialogo.zonaTexto.setText("Ele te pulveriza com um ataque certeiro antes mesmo de uma palavra sair da sua boca.");
+                Timer monitor = new Timer(1,e3 -> {
+                    dialogo.zonaTexto.setText("Ele te pulveriza com um ataque certeiro antes mesmo de uma palavra sair da sua boca.");
+                });
+                monitor.start();
                 dialogo.botaoAtacar.setEnabled(false);
                 dialogo.botaoConversar.setText("REINICIAR");
                 dialogo.botaoConversar.addActionListener(e1 -> {
