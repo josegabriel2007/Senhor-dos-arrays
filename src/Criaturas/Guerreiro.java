@@ -6,7 +6,7 @@ public class Guerreiro extends Personagens{
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/guerreiro.png";
+        return "Criaturas/Icons/guerreiro.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

@@ -33,7 +33,7 @@ public class Escolha extends JPanel {
         elfo.setFocusPainted(false);
         elfo.setVerticalTextPosition(SwingConstants.BOTTOM);
         elfo.setHorizontalTextPosition(SwingConstants.CENTER);
-        ImageIcon elfoIcon = new ImageIcon("src/Criaturas/Icons/elfo.png");
+        ImageIcon elfoIcon = new ImageIcon("Criaturas/Icons/elfo.png");
         Image imagem1 = elfoIcon.getImage();
         Image imagemRedimensionada1 = imagem1.getScaledInstance(150, 225, Image.SCALE_SMOOTH);
         elfo.setIcon(new ImageIcon(imagemRedimensionada1));
@@ -44,7 +44,7 @@ public class Escolha extends JPanel {
         guerreiro.setFocusPainted(false);
         guerreiro.setVerticalTextPosition(SwingConstants.BOTTOM);
         guerreiro.setHorizontalTextPosition(SwingConstants.CENTER);
-        ImageIcon guerreiroIcon = new ImageIcon("src/Criaturas/Icons/guerreiro.png");
+        ImageIcon guerreiroIcon = new ImageIcon("Criaturas/Icons/guerreiro.png");
         Image imagem2 = guerreiroIcon.getImage();
         Image imagemRedimensionada2 = imagem2.getScaledInstance(150, 225, Image.SCALE_SMOOTH);
         guerreiro.setIcon(new ImageIcon(imagemRedimensionada2));
@@ -55,7 +55,7 @@ public class Escolha extends JPanel {
         barbaro.setFocusPainted(false);
         barbaro.setVerticalTextPosition(SwingConstants.BOTTOM);
         barbaro.setHorizontalTextPosition(SwingConstants.CENTER);
-        ImageIcon barbaroIcon = new ImageIcon("src/Criaturas/Icons/barbaro.png");
+        ImageIcon barbaroIcon = new ImageIcon("Criaturas/Icons/barbaro.png");
         Image imagem3 = barbaroIcon.getImage();
         Image imagemRedimensionada3 = imagem3.getScaledInstance(150, 225, Image.SCALE_SMOOTH);
         barbaro.setIcon(new ImageIcon(imagemRedimensionada3));

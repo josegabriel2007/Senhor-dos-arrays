@@ -16,7 +16,7 @@ public class TelaInicial extends JPanel {
     public TelaInicial(){
 
         String linkInternet = "https://i.postimg.cc/W1L0jB75/359d79441230ad4e75259e1d7cc28612.png";
-        String caminhoLocal = "src/Cenarios/Imagens/fundoInicio.png";
+        String caminhoLocal = "Cenarios/Imagens/fundoInicio.png";
         //try e catch, que tenta pegar a imagem de fundo da internet, caso falhe ele pega a dos arquivos
         try {
             System.out.println("Tentando baixar imagem da internet...");

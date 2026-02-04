@@ -6,7 +6,7 @@ public class Dragao extends Inimigos {
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/dragao.png";
+        return "Criaturas/Icons/dragao.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

@@ -14,7 +14,7 @@ public class CenaCorredor extends Cenas{
         return "Explorando o castelo em busca do mago, você percebe que todos os servos e soldados do rei foram aprisionados... não, espere! há alguém pelos corredores aparentemente desnorteado.";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/corredor.jpg";
+        return "Cenarios/Imagens/corredor.jpg";
     }
     public String getDialogo1(){
         return "Você encontrou um soldado! Ele não compreende o que está acontecendo, provavelmente foi algum tipo de magia... o que desejas fazer?";

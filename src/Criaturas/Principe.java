@@ -6,7 +6,7 @@ public class Principe extends Inimigos{
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/principe.png";
+        return "Criaturas/Icons/principe.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

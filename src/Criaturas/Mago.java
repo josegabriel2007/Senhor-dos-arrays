@@ -6,7 +6,7 @@ public class Mago extends Inimigos {
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/darkmage-sprite.png";
+        return "Criaturas/Icons/darkmage-sprite.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

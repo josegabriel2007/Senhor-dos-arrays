@@ -14,7 +14,7 @@ public class CenaTerraco extends Cenas{
         return "Depois de derrotar o mago, você escuta um estrondoso rugido, talvez uma ultima ameaça, aparentemente o mago não estava sozinho.";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/terraco.jpg";
+        return "Cenarios/Imagens/terraco.jpg";
     }
     public String getDialogo1(){
         return "Chegando no terraço do castelo você achou um dragão, o que deseja fazer?";

@@ -14,7 +14,7 @@ public class CenaPrincipe extends Cenas{
         return "Olá, aventureiro! Uma floresta densa e milenar se estende diante de você. Suas copas se entrelaçam em um dossel quase impenetrável, bloqueando a luz solar e mergulhando o caminho em uma penumbra constante. Grandes aventuras o aguardam; é aqui que sua jornada começa.";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/floresta.jpg";
+        return "Cenarios/Imagens/floresta.jpg";
     }
     public String getDialogo1(){
         return "Enquanto você viaja pela floresta, você encontra um menino. Ele parece desnorteado, assustado e sozinho, o que deseja fazer?";

@@ -6,7 +6,7 @@ public class Soldado extends Inimigos{
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/soldado.png";
+        return "Criaturas/Icons/soldado.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

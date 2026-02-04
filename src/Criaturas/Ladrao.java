@@ -6,7 +6,7 @@ public class Ladrao extends  Inimigos{
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/ladrao.png";
+        return "Criaturas/Icons/ladrao.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

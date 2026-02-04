@@ -6,7 +6,7 @@ public class Barbaro extends Personagens{
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/barbaro.png";
+        return "Criaturas/Icons/barbaro.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

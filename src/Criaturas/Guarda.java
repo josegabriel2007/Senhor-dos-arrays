@@ -6,7 +6,7 @@ public class Guarda extends Inimigos {
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/guardian1-sprite.png";
+        return "Criaturas/Icons/guardian1-sprite.png";
     }
     public String getVidaMaxima(){
         return vidaMaxima;

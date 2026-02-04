@@ -6,7 +6,7 @@ public class Elfo extends Personagens{
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/elfo.png";
+        return "Criaturas/Icons/elfo.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;

@@ -14,7 +14,7 @@ public class CenaPrisao extends Cenas{
         return "Como você não foi convidado, você teve que andar furtivamente pelo castelo, e olha onde veio parar.";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/prisao.jpg";
+        return "Cenarios/Imagens/prisao.jpg";
     }
     public String getDialogo1(){
         return "Você acabou entrando na prisão, e encontrou um prisioneiro que escapou durante o caos, ele estava saqueando os soldados desacordados, o que deseja fazer?";

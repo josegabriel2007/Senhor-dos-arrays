@@ -14,7 +14,7 @@ public class CenaGoblin extends Cenas{
         return "Andando mais um pouco pela floresta, você sente a presença de algo, mas não sabe o que é.";
     }
     public String getFundo(){
-        return "src/Cenarios/Imagens/floresta.jpg";
+        return "Cenarios/Imagens/floresta.jpg";
     }
     public String getDialogo1(){
         return "Você não sabe falar goblinês. Ele ri da sua cara enquanto você se embola com as palavras";

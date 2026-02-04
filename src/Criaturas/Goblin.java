@@ -5,7 +5,7 @@ public class Goblin extends Inimigos{
     }
 
     public String getIcon(){
-        return "src/Criaturas/Icons/goblin-sprite.png";
+        return "Criaturas/Icons/goblin-sprite.png";
     };
     public String getVidaMaxima(){
         return vidaMaxima;
