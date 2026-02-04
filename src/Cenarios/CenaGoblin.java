@@ -3,7 +3,7 @@ package Cenarios;
 import Criaturas.Goblin;
 import Criaturas.Inimigos;
 
-public class CenaFloresta extends Cenas{
+public class CenaGoblin extends Cenas{
 
     Inimigos inimigo = new Goblin();
 
@@ -17,10 +17,10 @@ public class CenaFloresta extends Cenas{
         return "src/Cenarios/Imagens/floresta.jpg";
     }
     public String getDialogo1(){
-        return "Você acabou encontrando um goblin, ele faz sons estranhos e parece impaciente, o que deseja fazer?";
+        return "Você não sabe falar goblinês. Ele ri da sua cara enquanto você se embola com as palavras";
     }
     public String getDialogo2(){
-        return "É sério que você tentou conversar com um goblin? Preste atenção em seu inimigo.";
+        return "\"gur groug urg\". Desta vez, ele até tenta se comunicar, mas desiste e começa a ficar impaciente. Pare com essa brincadeiras gostosas, você vai acabar morto.";
     }
     public Inimigos getInimigo(){
         return inimigo;

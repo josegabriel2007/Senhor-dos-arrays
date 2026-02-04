@@ -5,6 +5,7 @@ import Criaturas.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class Interface extends JFrame {
     Personagens você;
@@ -12,6 +13,7 @@ public class Interface extends JFrame {
     public boolean valorBatalha = false;
     public boolean terminou = false;
     protected boolean tomarDano = false;
+    private int estadoDialogo = 0;
 
 
     public Interface() {
@@ -118,12 +120,12 @@ public class Interface extends JFrame {
 
             //Ação do botão conversar que faz começar com menos vida
             dialogo.botaoConversar.addActionListener(e -> {
-                dialogo.botaoAtacar.setText("BATALHAR");
-                dialogo.botaoConversar.setEnabled(false);
-                dialogo.botaoAtacar.addActionListener(e1 -> {
-                    tomarDano = true;
-                });
+                    dialogo.botaoConversar.addActionListener(e1 -> {
+                        valorCenario = 90;
+                        trocarTela();
+                    });
             });
+
 
             //Ação do botão atacar que começa a batalha
             dialogo.botaoAtacar.addActionListener(e -> {
@@ -634,8 +636,42 @@ public class Interface extends JFrame {
                 trocarTela();
             });
             add(transicao);
+        }else if (valorCenario == 34){
+            Cenas tela = new TelaGoblin();
+            TelaTextos transicao = new TelaTextos(tela);
+            transicao.avancar.setText("REINICIAR");
+            transicao.avancar.addActionListener(e -> {
+                valorCenario = 1;
+                trocarTela();
+            });
+            add(transicao);
+        }else if (valorCenario == 90){
+            Cenas tela = new CenaGoblin();
+            Dialogo dialogo = new Dialogo(this, tela, você);
+
+            dialogo.botaoConversar.addActionListener(e -> {
+                dialogo.botaoConversar.addActionListener(e1 -> {
+                    dialogo.botaoConversar.setText("AVANÇAR");
+                    dialogo.botaoAtacar.setEnabled(false);
+                    Timer monitor = new Timer(10,e2 -> {
+                       dialogo.zonaTexto.setText("Você diz \"hum gruou ain ui\", cansado de tentar entender seus gemidos e sons estranhos, o goblin desiste e vai embora. Como você conseguiu fazer isso!? Pela primeira vez um goblin tomou uma decisão inteligente!");
+                    });
+                    dialogo.botaoConversar.addActionListener(e2 -> {
+                        valorCenario = 34;
+                        trocarTela();
+                    });
+                    monitor.start();
+                });
+            });
+
+            dialogo.botaoAtacar.addActionListener(e -> {
+                valorBatalha = true;
+                valorCenario = 6;
+                trocarTela();
+            });
         }
         revalidate();
         repaint();
+
     }
 }

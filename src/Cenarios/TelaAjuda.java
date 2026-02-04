@@ -36,7 +36,7 @@ public class TelaAjuda extends JPanel {
         texto2.setEditable(false);
         texto2.setWrapStyleWord(true);
         texto2.setOpaque(false);
-        JTextArea texto3 = new JTextArea("DICAS: \nEscolha sua classe de acordo como queira jogar. \nLeia as descrições de cada situação. \nNão fique atacando sem parar, dê uma pausa e se cure quando necessário. \nNão saia atacando todo mundo ou conversando com todos. \nExistem tres finais possíveis, jogue e descubra-os.");
+        JTextArea texto3 = new JTextArea("DICAS: \nEscolha sua classe de acordo como queira jogar.\nNÃO CONVERSE COM GOBLINS! \nLeia as descrições de cada situação. \nNão fique atacando sem parar, dê uma pausa e se cure quando necessário. \nNão saia atacando todo mundo ou conversando com todos. \nExistem quatro finais possíveis, jogue e descubra-os.");
         texto3.setForeground(Color.white);
         texto3.setFont(new Font("ARIAL", Font.BOLD,30));
         texto3.setLineWrap(true);
